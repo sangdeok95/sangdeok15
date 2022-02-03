@@ -1,0 +1,140 @@
+@charset "utf-8";
+@media all and (max-width:1024px) {
+#logo{
+    text-align: center;
+    display:block;
+    width: 17%;
+    margin: 0 auto;
+    position: relative;
+    margin-top: -10px;
+}
+
+#logo img{width: 100px;}
+
+.wrap{width: 100%; position: relative;}
+
+.topmenu>ul>li{
+	float:left;
+	font-size:0.8em;
+	margin:0px 5px;
+}
+
+.topmenu>ul{
+	position:absolute;
+	right:10px;
+	top:45%;
+	transform:translateY(-25%);
+}
+
+.header{
+    background: rgba(153,102,153,0.4);
+    border-bottom: 2px solid lightcyan;
+    z-index: 9999;
+    top:0;
+    height: 60px;
+    position: fixed;
+}
+
+.header>nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+#menu{
+    display: block;
+    width: 40px;
+    margin-left: 40px;
+    position: relative;
+    top: 15px;
+    cursor: pointer;
+}
+
+#menu>span{
+    display: block;
+    width: 100%;
+    background: lightcyan;
+    height: 2px;
+    transition: all .3s;
+}
+
+#menu>span:nth-child(2){margin: 10px 0px;}
+
+.menuAni{
+    position: relative;
+    width: 100%;
+    z-index: 99;
+}
+
+.menuAni::after{
+    content: '';
+    display: block;
+    background: lightcyan;
+    width: 40px; height: 3px;
+    top: 12px; left: 0;
+    transform: rotate(45deg);
+    position: absolute;
+}
+
+.menuAni::before{
+    content: '';
+    display: block;
+    background: lightcyan;
+    width: 40px; height: 3px;
+    top: 12px; left: 0;
+    transform: rotate(-45deg);
+    position: absolute;
+}
+
+#menu.menuAni>span{background: transparent; transition: all .3s;}
+
+#gnb{
+    display: none;
+    margin: 60px auto;
+    position: absolute;
+    background: rgba(0,0,0,0.4);
+    top:0;
+    width: 100%;
+}
+
+#gnb>li:first-child>a{border-top: 2px solid lightcyan;}
+
+#gnb>li>a, .submenu>li>a{
+    display: block;
+    padding: 10px 0px 10px 30px;
+    color: #fff;
+    transition: all .1s;
+    border-bottom: 1px solid lightcyan;
+}
+
+.submenu{display: none;}
+.submenu>li>a{padding: 10px 0px 10px 40px;}
+.submenu>li>a::before{content: '-';}
+
+
+
+
+
+
+
+footer{height: 130px;}
+.name{
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.footer{
+    float: left;
+    width: 50%;
+    line-height: 2rem;
+    text-align: center;
+}
+.footer1{
+    float: left;
+    width: 50%;
+    line-height: 2rem;
+    text-align: center;
+}
+}
